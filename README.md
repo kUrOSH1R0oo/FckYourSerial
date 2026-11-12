@@ -82,8 +82,8 @@ The result is a byte-for-byte valid ViewState the target will deserialize — tr
 ### From source
 
 ```bash
-git clone https://github.com/yourname/fckyourserial.git
-cd fckyourserial
+git clone https://github.com/kUrOSH1R0oo/FckYourSerial
+cd FckYourSerial
 pip install -r requirements.txt
 ```
 
