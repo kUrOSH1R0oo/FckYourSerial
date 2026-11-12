@@ -1,4 +1,4 @@
-# fckyourserial
+# FckYourSerial
 
 **A cross-platform ASP.NET ViewState deserialization payload generator — the ysoserial `TypeConfuseDelegate` gadget, rewritten in pure Python for CTF use.**
 
