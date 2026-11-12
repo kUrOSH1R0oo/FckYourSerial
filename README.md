@@ -4,7 +4,7 @@
 
 Tired of ysoserial's `.exe`-only workflow? `fckyourserial` runs anywhere Python 3.8+ runs — Linux, macOS, Windows, even a bare VNC'd Kali box — and produces a **signed + encrypted** `__VIEWSTATE` value that triggers `Process.Start("cmd.exe", "/c <your command>")` when deserialized by a vulnerable ASP.NET application.
 
-> ⚠️ **For authorized security testing and CTF competitions only.** Forging ViewState against systems you do not own or have explicit permission to test is illegal in most jurisdictions.
+> ⚠️ **For authorized security testing only.** Forging ViewState against systems you do not own or have explicit permission to test is illegal in most jurisdictions.
 
 ---
 
@@ -141,8 +141,8 @@ usage: fckyourserial [-h] [-cmd STR | -ps SCRIPT | command]
 | `command` (positional) | OS command to run via `cmd.exe /c <command>` |
 | `-cmd STR` | Same as the positional argument (alternative form) |
 | `-ps SCRIPT` | Wrap the given PowerShell script into `powershell -NoP -NonI -enc <base64>` automatically |
-| `-vkey HEX` | **ValidationKey** from `machineKey` (hex). Defaults to a built-in demo key |
-| `-ekey HEX` | **DecryptionKey** from `machineKey` (hex). Defaults to a built-in demo key |
+| `-vkey HEX` | **ValidationKey** from `machineKey` (hex). |
+| `-ekey HEX` | **DecryptionKey** from `machineKey` (hex). |
 | `--purpose STR` | Primary purpose string fed to SP800-108. Default: `WebForms.HiddenFieldPageStatePersister.ClientState` |
 | `--specific STR [STR ...]` | Specific purpose strings. Default: `TemplateSourceDirectory: /`, `Type: System.Web.UI.Page` |
 | `--legacy` | Skip SP800-108 derivation; use raw machineKey values (ASP.NET < 4.5) |
