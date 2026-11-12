@@ -2,7 +2,7 @@
 
 **A cross-platform ASP.NET ViewState deserialization payload generator — the ysoserial `TypeConfuseDelegate` gadget, rewritten in pure Python for CTF use.**
 
-Tired of ysoserial's `.exe`-only workflow? `fckyourserial` runs anywhere Python 3.8+ runs — Linux, macOS, Windows, even a bare VNC'd Kali box — and produces a **signed + encrypted** `__VIEWSTATE` value that triggers `Process.Start("cmd.exe", "/c <your command>")` when deserialized by a vulnerable ASP.NET application.
+`fckyourserial` runs anywhere Python 3.8+ runs — Linux, macOS, Windows, even a bare VNC'd Kali box — and produces a **signed + encrypted** `__VIEWSTATE` value that triggers `Process.Start("cmd.exe", "/c <your command>")` when deserialized by a vulnerable ASP.NET application.
 
 > ⚠️ **For authorized security testing only.** Forging ViewState against systems you do not own or have explicit permission to test is illegal in most jurisdictions.
 
